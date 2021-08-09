@@ -1,4 +1,4 @@
-import Simpson from "../simpson/Simpson";
+import Simpson from "./simpson/Simpson";
 import './Simpsons.css'
 
 let simpsons = [
