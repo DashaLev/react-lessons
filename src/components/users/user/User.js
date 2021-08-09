@@ -1,4 +1,4 @@
-import UserAddress from "./userAddress/UserAddress";
+import Address from "./userAddress/Address";
 import './User.css'
 
 export default function User({item:{name, username, email, address, phone, website}}) {
@@ -8,7 +8,7 @@ export default function User({item:{name, username, email, address, phone, websi
             <h3>{username}, email:{email}, website:{website}</h3>
             <div>
                 {
-                    <UserAddress address={address}/>
+                    <Address address={address}/>
                 }
             </div>
         </div>

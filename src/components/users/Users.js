@@ -1,7 +1,7 @@
 import User from "./user/User";
 
 
-let usersList = [
+let users = [
     {
         id: 1,
         name: 'Leanne Graham',
@@ -234,11 +234,15 @@ let usersList = [
     }
 ];
 
-export default function UsersList() {
+export default function Users() {
     return (
         <div>
             {
-                usersList.map(value => <User item={value}/>)
+                users.map(value =>
+                    <User
+                        key={value.id}
+                        item={value}
+                    />)
             }
         </div>
     )
