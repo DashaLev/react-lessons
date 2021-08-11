@@ -1,0 +1,9 @@
+.user-item h2, .user-item > p {
+    text-align: center;
+}
+
+.posts-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

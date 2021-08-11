@@ -1,0 +1,7 @@
+.comment-item {
+    width: 19%;
+}
+.comment-item > p{
+    font-size: 13px;
+    text-align: justify;
+}

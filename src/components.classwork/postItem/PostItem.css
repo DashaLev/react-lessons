@@ -1,0 +1,8 @@
+.post-item {
+    width: 49%;
+}
+.comments-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
