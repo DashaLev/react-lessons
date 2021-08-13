@@ -1,0 +1,16 @@
+h2 {
+    background-color: gainsboro;
+    text-align: center;
+}
+[class*="-box"] {
+    display: flex;
+    margin-left: 30px;
+}
+[class*="-box"]>div {
+    width: 40%;
+}
+[class*="-details"] {
+    padding: 10px;
+    position: fixed;
+    right: 0;
+}

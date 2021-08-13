@@ -1,0 +1,10 @@
+.user-item {
+    margin-bottom: 10px;
+}
+.user-item span {
+    font-weight: bold;
+    margin-right: 15px;
+}
+.user-item button {
+    cursor: pointer;
+}

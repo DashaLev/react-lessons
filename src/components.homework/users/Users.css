@@ -1,0 +1,15 @@
+.users-list_user-posts {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.users-list {
+    padding-top: 18px;
+    margin-left: 30px;
+    width: 25%;
+}
+.user-posts {
+    width: 80%;
+    max-height: 370px;
+    overflow: auto;
+}
