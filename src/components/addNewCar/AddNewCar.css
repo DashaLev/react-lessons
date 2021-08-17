@@ -1,0 +1,7 @@
+.add-new-car-form {
+    text-align: center;
+}
+.add-new-car-form input {
+    height: 30px;
+    box-sizing: border-box;
+}
