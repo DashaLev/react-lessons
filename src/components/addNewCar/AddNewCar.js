@@ -15,8 +15,7 @@ export function AddNewCar() {
         let tempCar = {model,price,year}
         setNewCar(tempCar)
 
-        //saveCar(tempCar)
-        saveCar(newCar)
+        saveCar(tempCar)
     }
 
     const onInputChangeModel = (e) => {
