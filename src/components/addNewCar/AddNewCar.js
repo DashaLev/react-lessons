@@ -4,19 +4,20 @@ import './AddNewCar.css'
 
 export function AddNewCar() {
 
+    let [model, setModel] = useState('Audi')
+    let [price, setPrice] = useState('20000')
+    let [year, setYear] = useState('2010')
+    let [newCar, setNewCar] = useState({model,price,year})
+
     const onSubmitForm = (e) => {
         e.preventDefault()
 
         let tempCar = {model,price,year}
         setNewCar(tempCar)
 
+        //saveCar(tempCar)
         saveCar(newCar)
     }
-
-    let [model, setModel] = useState('')
-    let [price, setPrice] = useState('')
-    let [year, setYear] = useState('')
-    let [newCar, setNewCar] = useState({model,price,year})
 
     const onInputChangeModel = (e) => {
         setModel(e.target.value)
