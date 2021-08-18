@@ -16,7 +16,7 @@ export function Cars() {
     }
     useEffect( () => {
         getCars().then(value => setCars([...value]))
-    },[onClickAddCar,onClickDeleteCar])
+    },[cars])
 
     return (
         <div className={'cars-wrap'}>
