@@ -1,8 +1,7 @@
 import {useState} from "react";
-import {saveCar} from "../../services/car.service";
 import './AddNewCar.css'
 
-export function AddNewCar() {
+export function AddNewCar({onClickAddCar}) {
 
     let [model, setModel] = useState('Audi')
     let [price, setPrice] = useState('20000')
@@ -15,7 +14,8 @@ export function AddNewCar() {
         let tempCar = {model,price,year}
         setNewCar(tempCar)
 
-        saveCar(newCar)
+        onClickAddCar(newCar)
+
     }
 
     const onInputChangeModel = (e) => {

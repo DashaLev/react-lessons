@@ -1,28 +1,40 @@
 import {useEffect, useState} from "react";
 import {deleteCar, getCars, saveCar} from "../../services/car.service";
 import {Car} from "../car/Car";
+import {AddNewCar} from "../addNewCar/AddNewCar";
 import './Cars.css'
 
 export function Cars() {
 
     let [cars, setCars] = useState([])
 
+    useEffect( () => {
+        getCars().then(value => setCars([...value]))
+    },[])
+
     const onClickAddCar = ({model, price, year}) => {
-        saveCar({model, price, year})
+
+        saveCar({model, price, year}).then(value => {
+            cars.push(value);
+            setCars([...cars]);
+        })
     }
 
     const onClickDeleteCar = (id) => {
         deleteCar(id)
+        let newCars = cars.filter(item => item.id !== id)
+        setCars([...newCars])
     }
-    useEffect( () => {
-        getCars().then(value => setCars([...value]))
-    },[cars])
+
 
     return (
-        <div className={'cars-wrap'}>
-            {
-                cars.map(value => <Car key={value.id} item={value} onClickDeleteCar={onClickDeleteCar} onClickAddCar={onClickAddCar}/>)
-            }
-        </div>
+        <>
+            <AddNewCar onClickAddCar={onClickAddCar}/>
+            <div className={'cars-wrap'}>
+                {
+                    cars.map(value => <Car key={value.id} item={value} onClickDeleteCar={onClickDeleteCar} onClickAddCar={onClickAddCar}/>)
+                }
+            </div>
+        </>
     )
 }
