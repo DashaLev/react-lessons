@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../user.service";
+import {getUsers} from "../../services/user.service";
 
 export function Users({onChangeReturnID}) {
 

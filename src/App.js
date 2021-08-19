@@ -1,7 +1,7 @@
 import {Users} from "./components.users.via.select.option/users/Users";
 import Posts from "./components.users.via.select.option/posts/Posts";
 import {useState} from "react";
-import {getPostsByUserId} from "./components.users.via.select.option/post.service";
+import {getPostsByUserId} from "./services/post.service";
 import './App.css'
 
 function App() {
