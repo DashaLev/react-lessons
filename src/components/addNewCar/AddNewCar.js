@@ -1,25 +1,18 @@
 import {useState} from "react";
 import './AddNewCar.css'
+import {saveCar} from "../../services/car.service";
 
-export function AddNewCar({onClickAddCar}) {
+export function AddNewCar() {
 
-    let [model, setModel] = useState('Audi')
-    let [price, setPrice] = useState('20000')
-    let [year, setYear] = useState('2010')
+    let [model, setModel] = useState('')
+    let [price, setPrice] = useState('')
+    let [year, setYear] = useState('')
     let [newCar, setNewCar] = useState({model,price,year})
 
-    const onSubmitForm = (e) => {
-        e.preventDefault()
-
-        let tempCar = {model,price,year}
-        setNewCar(tempCar)
-
-        onClickAddCar(newCar)
-
-    }
 
     const onInputChangeModel = (e) => {
         setModel(e.target.value)
+
     }
     const onInputChangePrice = (e) => {
         let priceValue = Number(e.target.value)
@@ -28,6 +21,18 @@ export function AddNewCar({onClickAddCar}) {
     const onInputChangeYear = (e) => {
         let yearValue = Number(e.target.value)
         setYear(yearValue)
+    }
+
+    const onSubmitForm = (e) => {
+        e.preventDefault()
+
+        let tempCar = {model,price,year}
+        setNewCar(tempCar)
+
+        saveCar(tempCar).then(value => {
+            alert(`You have just added model-${value.model}, year-${value.year}, price-${value.price}`)
+        })
+
     }
 
     return (

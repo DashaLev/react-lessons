@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import {deleteCar, getCars, saveCar} from "../../services/car.service";
 import {Car} from "../car/Car";
-import {AddNewCar} from "../addNewCar/AddNewCar";
 import './Cars.css'
 
 export function Cars() {
@@ -29,7 +28,6 @@ export function Cars() {
 
     return (
         <>
-            <AddNewCar onClickAddCar={onClickAddCar}/>
             <div className={'cars-wrap'}>
                 {
                     cars.map(value => <Car key={value.id} item={value} onClickDeleteCar={onClickDeleteCar} onClickAddCar={onClickAddCar}/>)
