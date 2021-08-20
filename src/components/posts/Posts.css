@@ -1,0 +1,12 @@
+.posts-page {
+    display: flex;
+}
+.posts-page > div{
+    width: 50%;
+}
+.posts-list h2 {
+    text-align: center;
+}
+.posts-list a {
+    margin-left: 10px;
+}
