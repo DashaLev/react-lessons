@@ -1,6 +1,6 @@
 
 const saveCar = ({model,price,year}) => {
-    return fetch('http://195.72.146.25/api/v1/cars', {
+    return fetch('http://91.201.233.14/api/v1/cars', {
         method: 'POST',
         body: JSON.stringify({model,price,year}),
         headers: {
@@ -11,12 +11,12 @@ const saveCar = ({model,price,year}) => {
 }
 
 const deleteCar = (id) => {
-   fetch(`http://195.72.146.25/api/v1/cars/${id}`, {
+   fetch(`http://91.201.233.14/api/v1/cars/${id}`, {
         method: 'DELETE',
    })
 }
 const getCars = () => {
-    return fetch('http://195.72.146.25/api/v1/cars').then(value => value.json())
+    return fetch('http://91.201.233.14/api/v1/cars').then(value => value.json())
 }
 
 
