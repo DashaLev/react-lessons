@@ -1,0 +1,4 @@
+const FETCH_USERS = 'FETCH_USERS'
+const ADD_USER = 'ADD_USER'
+
+export {FETCH_USERS, ADD_USER}
