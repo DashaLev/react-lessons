@@ -12,9 +12,7 @@ const addUserWithThunk = (user) => async (dispatch) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            name: user.name
-        })
+        body: JSON.stringify({name: user.name})
     });
     let savedUser = await response.json();
     dispatch(addUser(savedUser));
