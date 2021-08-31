@@ -13,9 +13,7 @@ const saveUser = async (dispatch, {name}) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            name
-        })
+        body: JSON.stringify({name})
     }).then(value => value.json());
     dispatch(addUser(response));
 
