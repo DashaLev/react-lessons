@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getUsers, saveUser} from "./services/user.service";
-import {loadUsers} from "./redux/actions";
+import {addUserWithThunk, fetchUsersWithThunk} from "./services/user.service";
+
 
 export default function App() {
 
@@ -9,12 +9,12 @@ export default function App() {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        getUsers().then(value => dispatch(loadUsers(value)))
+        dispatch(fetchUsersWithThunk());
     }, []);
 
-    let onClickAddUser = async (e) => {
-        let user = {name: 'John Lennon'}
-        await saveUser(dispatch, user);
+    let onClickAddUser = (e) => {
+        let user = {name: 'Paul McCartney'}
+        dispatch(addUserWithThunk(user));
     };
     return (
         <div>

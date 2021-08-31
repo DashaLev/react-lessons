@@ -1,12 +1,11 @@
-import {addUser} from "../redux/actions";
+import {addUser, loadUsers} from "../redux/actions";
 
-const getUsers = async () => {
-    let response = await fetch('https://jsonplaceholder.typicode.com/users')
-        .then(value => value.json());
-    return response;
+const fetchUsersWithThunk = () => async (dispatch) => {
+    let response = await (await fetch('https://jsonplaceholder.typicode.com/users')).json();
+    dispatch(loadUsers(response));
 }
 
-const saveUser = async (dispatch, {name}) => {
+const addUserWithThunk = (user) => async (dispatch) => {
     let response = await fetch('https://jsonplaceholder.typicode.com/users', {
         method: 'POST',
         headers: {
@@ -14,10 +13,12 @@ const saveUser = async (dispatch, {name}) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            name
+            name: user.name
         })
-    }).then(value => value.json());
-    dispatch(addUser(response));
+    });
+    let savedUser = await response.json();
+    dispatch(addUser(savedUser));
 
 }
-export {saveUser,getUsers}
+
+export {fetchUsersWithThunk,addUserWithThunk}
