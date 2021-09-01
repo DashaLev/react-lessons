@@ -1,0 +1,9 @@
+.add-todo-wrap {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+}
+.add-todo-wrap input {
+    box-sizing: border-box;
+    height: 35px;
+}

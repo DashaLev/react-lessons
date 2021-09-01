@@ -1,9 +1,12 @@
-
+import {TodoForm} from "./components/todoForm/TodoForm";
+import {TodoList} from "./components/todoList/TodoList";
+import './App.css'
 
 function App() {
   return (
-    <div>
-      Hello
+    <div className={'wrap'}>
+        <TodoForm/>
+        <TodoList/>
     </div>
   );
 }

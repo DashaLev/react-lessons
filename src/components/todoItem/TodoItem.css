@@ -1,0 +1,17 @@
+.ds-none {
+    display: none;
+}
+.ds-block {
+    display: block;
+}
+li {
+    margin-bottom: 10px;
+}
+.todo-details-wrap {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.todo-details-wrap button {
+    height: 30px;
+}
