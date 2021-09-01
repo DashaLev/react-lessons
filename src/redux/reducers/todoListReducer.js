@@ -6,20 +6,32 @@ export const todoListReducer = (state=initialState, action) => {
             return {...state, todoList:[...state.todoList, {...action.payload, id:Math.random().toString(36).substr(2, 9), completed: false}]}
         case 'DELETE_TODO_ITEM':
             return {...state, todoList:[...state.todoList.filter(value => (value.id !== action.payload))]}
-        case 'UPDATE_TODO':
+        case 'UPDATE_TODO_ITEM':
             return {...state,todoList:[...state.todoList.map(value => {
                         if (value.id === action.payload.id) {
                             return {
                                 ...value,
                                 title: action.payload.title,
-                                description: action.payload.description
+                                description: action.payload.description,
+                                completed: action.payload.completed
                             }
                         } else {
                             return value
                         }
                    })
                 ]}
-
+        case 'COMPLETED_TODO_ITEM':
+            return {...state,todoList:[...state.todoList.map(value => {
+                    if (value.id === action.payload) {
+                        return {
+                            ...value,
+                            completed: true
+                        }
+                    } else {
+                        return value
+                    }
+                })
+                ]}
         default:
             return state
     }
