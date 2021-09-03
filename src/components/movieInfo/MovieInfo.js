@@ -8,14 +8,40 @@ export const MovieInfo = ({item, movie}) => {
           {
               item &&
           <div className={'movie-list-info'}>
-              <h2>{item.title}</h2>
-              Release: {item.release_date}
+              {
+                  item.title.length <= 20 && <h2>{item.title}</h2>
+              }
+              {
+                  item.title.length >= 21 && item.title.length <= 22 && <h3>{item.title}</h3>
+              }
+              {
+                  item.title.length >= 23 && item.title.length <= 28 && <h4>{item.title}</h4>
+              }
+              {
+                  item.title.length >= 29 && item.title.length <= 40 && <h5>{item.title}</h5>
+              }
+              {
+                  item.title.length >= 41 && <h6>{item.title}</h6>
+              }
+              <div className={'release_date'}>Release: {item.release_date}</div>
               <div className={'popularity_rating'}>
                   <div>Popularity: {item.popularity}</div>
                   <div>Rating: {item.vote_average} ({item.vote_count})</div>
               </div>
-
-              {item.overview}
+              <div className={'overview'}>
+                  {item.overview &&
+                      <>
+                          <span>Movie description:</span><br/><br/>
+                          {item.overview.split('.')[0]} {item.overview.split('. ')[1]}...
+                      </>
+                  }
+                  {!item.overview &&
+                  <>
+                      <span>Movie description:</span><br/><br/>
+                     No description:(
+                  </>
+                  }
+              </div>
           </div>
           }
           {

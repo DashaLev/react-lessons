@@ -30,6 +30,7 @@ export const MoviesList = () => {
                <button
                    onClick={()=> setPageNumber(prevState => prevState + 1)}
                    disabled={pageNumber === totalPages}
+                   className={'more-movies'}
                >More movies</button>
        </div>
     )

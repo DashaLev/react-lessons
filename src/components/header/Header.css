@@ -4,10 +4,11 @@ header {
     height: 80px;
     align-items: center;
     border-bottom: 2px solid lightgrey;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #0c294a;
+    background-color: #1e3148;
     z-index: 20;
 }
 .menu {
@@ -17,7 +18,7 @@ header {
     padding-left: 0;
 }
 .menu li {
-    margin-right: 20px;
+    margin-right: 45px;
 }
 .menu li a {
     text-decoration: none;

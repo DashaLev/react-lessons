@@ -1,24 +1,64 @@
-.movie-list-info h2 {
-    padding-left: 10px;
+.movie-list-info h2, .movie-list-info h3, .movie-list-info h4,.movie-list-info h5, .movie-list-info h6 {
+    margin: 5px 0;
     color: lightgrey;
     text-align: center;
+}
+.movie-list-info h2 {
+    font-size: 20px;
+}
+.movie-list-info h3 {
+    font-size: 18px;
+}
+.movie-list-info h4 {
+    font-size: 16px;
+}
+.movie-list-info h5 {
+    font-size: 14px;
+}
+.movie-list-info h6 {
+    font-size: 12px;
 }
 .popularity_rating {
     display: flex;
     justify-content: space-between;
     position: absolute;
     padding-left: 3px;
-    width: 295px;
-    top: 425px;
+    top: 310px;
     color:white;
+    width: 99%;
+    box-sizing: border-box;
 }
 .popularity_rating div {
     padding: 0 3px;
     border-radius: 3px;
+    font-size: 12px;
 }
 .popularity_rating div:first-child {
     background-color: #c76342;
 }
 .popularity_rating div:last-child {
     background-color: #a8a82f;
+}
+.release_date {
+    color: lightgrey;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.overview {
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    color: white;
+    text-align: justify;
+    padding: 25px 10px 10px 10px;
+    z-index: 10;
+}
+.overview span {
+    font-size: 18px;
+    text-transform: uppercase;
 }
