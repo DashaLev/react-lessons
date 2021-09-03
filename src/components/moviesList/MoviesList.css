@@ -1,0 +1,9 @@
+.movies-list-wrap {
+    padding: 20px;
+}
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}

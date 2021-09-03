@@ -1,0 +1,24 @@
+.movie-list-info h2 {
+    padding-left: 10px;
+    color: lightgrey;
+    text-align: center;
+}
+.popularity_rating {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding-left: 3px;
+    width: 295px;
+    top: 425px;
+    color:white;
+}
+.popularity_rating div {
+    padding: 0 3px;
+    border-radius: 3px;
+}
+.popularity_rating div:first-child {
+    background-color: #c76342;
+}
+.popularity_rating div:last-child {
+    background-color: #a8a82f;
+}

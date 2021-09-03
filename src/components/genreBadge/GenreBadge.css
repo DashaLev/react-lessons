@@ -1,0 +1,14 @@
+.genres-wrap {
+    display: flex;
+    text-align: right;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    color: white;
+}
+.genres-wrap div {
+    padding: 0 3px;
+    background-color: grey;
+    border-radius: 3px;
+    margin-right: 5px;
+}

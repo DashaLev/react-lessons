@@ -1,0 +1,26 @@
+.video-block-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.video-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left:0;
+    width: 50%;
+    justify-content: center;
+}
+.video-links-list a {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color:darkslategray;
+    font-weight: bold;
+    border: 1px solid darkslategray;
+    padding: 0 5px;
+    height: max-content
+}
+.video-links-list a:focus {
+    color: black;
+    border: 1px solid black;
+}

@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    align-items: center;
+    border-bottom: 2px solid lightgrey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0c294a;
+    z-index: 20;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-left: 0;
+}
+.menu li {
+    margin-right: 20px;
+}
+.menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color:lightgrey;
+    text-transform: uppercase;
+}
+.menu li a:hover, .menu li a:focus  {
+    color: #05A6CC;
+}

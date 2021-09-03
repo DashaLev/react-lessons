@@ -1,0 +1,11 @@
+.list-picture {
+    border-radius: 10px 10px 0 0;
+}
+.bg-picture {
+    width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: -20;
+    opacity: 0.40;
+}
