@@ -11,3 +11,7 @@
     z-index: -20;
     opacity: 0.40;
 }
+.item-picture {
+    margin-right: 15px;
+    border-radius: 15px;
+}

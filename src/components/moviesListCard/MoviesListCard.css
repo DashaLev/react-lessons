@@ -10,7 +10,7 @@
    box-shadow: 0 14px 28px rgba(248, 245, 245, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .movies-list-card-wrap:hover .overview {
-   display: block;
+   display:  -webkit-box;
 }
 .movies-list-card-wrap a {
    text-decoration: none;

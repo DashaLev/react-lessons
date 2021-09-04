@@ -1,3 +1,13 @@
+.movies-details-dark-theme {
+    background-color: black;
+    opacity: 0.9;
+    color: lightgrey;
+    min-height: 100vh;
+}
+.movies-details-light-theme {
+    color: black;
+}
+
 .video-block-wrap {
     display: flex;
     justify-content: space-around;
@@ -14,13 +24,28 @@
     display: block;
     margin: 5px;
     text-decoration: none;
-    color:darkslategray;
     font-weight: bold;
-    border: 1px solid darkslategray;
     padding: 0 5px;
     height: max-content
 }
-.video-links-list a:focus {
+.video-links-list .link-dark-theme:focus {
+    color: white;
+    border: 2px solid white;
+}
+.link-light-theme {
     color: black;
-    border: 1px solid black;
+    border: 2px solid black;
+}
+.link-dark-theme {
+    color: lightgrey;
+    border: 2px solid lightgrey;
+}
+.poster_info {
+    display: flex;
+    padding: 90px 10px 0 10px;
+    justify-content: space-between;
+}
+.videos-title {
+    text-align: center;
+    margin-top: 0;
 }

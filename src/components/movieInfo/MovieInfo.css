@@ -1,6 +1,5 @@
 .movie-list-info h2, .movie-list-info h3, .movie-list-info h4,.movie-list-info h5, .movie-list-info h6 {
     margin: 5px 0;
-    color: lightgrey;
     text-align: center;
 }
 .movie-list-info h2 {
@@ -40,7 +39,6 @@
     background-color: #a8a82f;
 }
 .release_date {
-    color: lightgrey;
     padding-left: 10px;
     margin-bottom: 5px;
 }
@@ -55,10 +53,77 @@
     border-radius: 10px;
     color: white;
     text-align: justify;
-    padding: 25px 10px 10px 10px;
+    padding: 10px;
     z-index: 10;
+    line-height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-box-orient: vertical;
+    -webkit-line-clamp: 16;
+    -webkit-box-orient: vertical;
+
 }
 .overview span {
     font-size: 18px;
     text-transform: uppercase;
+}
+.movie-details-info h1 {
+    text-transform: uppercase;
+    font-size: 34px;
+    margin: 0;
+}
+.tagline {
+    font-style: italic;
+}
+.description, .homepage-link, .rating-block span, .release_budget-info span, .production_companies-group div span {
+    font-weight: bold;
+}
+.movie-details-info a {
+    display: block;
+    width: max-content;
+    padding: 0 5px;
+    background-color:transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.link-black {
+    color: black;
+    border: 2px solid black;
+}
+.link-light {
+    color: lightgrey;
+    border: 2px solid lightgrey;
+}
+.rating-block {
+    margin-bottom: 5px;
+}
+.rating-block, .release_budget-info {
+    font-size: 17px;
+}
+.color-red {
+    color: red;
+}
+.color-green {
+    color: green;
+}
+.genre-group, .production_countries-group, .production_companies-group {
+    display: flex;
+    margin: 5px 0;
+}
+.genre-group div, .production_countries-group div {
+    margin: 0 5px;
+    font-weight: bold;
+}
+.production_companies-group {
+    align-items: center;
+    flex-wrap: wrap;
+}
+.production_companies-group div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+.color-lg {
+    color: lightgrey;
 }

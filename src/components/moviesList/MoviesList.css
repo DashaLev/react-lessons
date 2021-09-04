@@ -1,12 +1,12 @@
-.movies-list-wrap {
+.dark-theme-bg {
     padding: 120px 20px 30px 20px;
-    /*background-color: #0c294a;*/
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
+    background: #141E30;
+    background: linear-gradient(to right, #243B55, #141E30);
+}
+.light-theme-bg {
+    padding: 120px 20px 30px 20px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 .movies-list {
     display: flex;
@@ -19,14 +19,10 @@
     width: 200px;
     height: 45px;
     margin: 20px auto;
-    border: 2px solid #243B55;
     border-radius: 5px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     cursor: pointer;
-    background-color: #1e3148;
-    color: lightgrey;
     text-transform: uppercase;
-
 }
 .more-movies:hover {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -37,4 +33,14 @@
 }
 .more-movies:disabled {
     display: none;
+}
+.dark-button {
+    border: 2px solid #243B55;
+    background-color: #1e3148;
+    color: lightgrey;
+}
+.light-button {
+    border: 2px solid #79b9f5;
+    background-color: #8EC5FC;
+    color: #0000EE;
 }
