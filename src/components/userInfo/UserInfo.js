@@ -1,11 +1,13 @@
-import avatar from './avatar.png'
 import './UserInfo.css'
+import {useSelector} from "react-redux";
 
 export const UserInfo = () => {
+    let {light_theme} = useSelector(state => state.themeReducer)
+
     return (
-        <div className={'user-info-wrap'}>
-            <div>user name</div>
-            <img src={avatar} alt={'Avatar'}/>
+        <div className={light_theme ? 'user-info-wrap light' : 'user-info-wrap dark'}>
+            <div className={'user-full-name'}>User name</div>
+            <div className={'user-initial'}>U</div>
         </div>
     )
 }

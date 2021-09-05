@@ -48,7 +48,6 @@ export const MovieDetails = (props) => {
                   </div>
               </div> : null
           }
-
       </div>
   )
 }
