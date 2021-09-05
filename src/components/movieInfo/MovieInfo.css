@@ -67,13 +67,28 @@
     font-size: 18px;
     text-transform: uppercase;
 }
+.movie-details-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 440px;
+    padding: 0 15px 10px 15px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 15px;
+}
 .movie-details-info h1 {
     text-transform: uppercase;
     font-size: 34px;
     margin: 0;
+    text-align: center;
 }
 .tagline {
     font-style: italic;
+    text-align: center;
+}
+.description {
+    text-align: justify;
+    margin: 0;
 }
 .description, .homepage-link, .rating-block span, .release_budget-info span, .production_companies-group div span {
     font-weight: bold;
@@ -85,7 +100,7 @@
     background-color:transparent;
     border-radius: 5px;
     text-decoration: none;
-    margin-bottom: 15px;
+    font-weight: bold;
 }
 .link-black {
     color: black;
@@ -94,9 +109,6 @@
 .link-light {
     color: lightgrey;
     border: 2px solid lightgrey;
-}
-.rating-block {
-    margin-bottom: 5px;
 }
 .rating-block, .release_budget-info {
     font-size: 17px;
@@ -109,7 +121,6 @@
 }
 .genre-group, .production_countries-group, .production_companies-group {
     display: flex;
-    margin: 5px 0;
 }
 .genre-group div, .production_countries-group div {
     margin: 0 5px;
