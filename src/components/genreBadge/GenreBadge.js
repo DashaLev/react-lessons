@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import {getGenres} from "../../services/movie.service";
 import {useDispatch, useSelector} from "react-redux";
 import './GenreBadge.css'
+import {getMoviesGenres} from "../../redux/actions";
 
 export const GenreBadge = ({genre_ids}) => {
 
@@ -9,7 +10,7 @@ export const GenreBadge = ({genre_ids}) => {
     let dispatch = useDispatch()
 
     useEffect(() => {
-        getGenres().then(({data: {genres}}) => dispatch({type: 'GET_GENRES', payload: genres}))
+        getGenres().then(({data: {genres}}) => dispatch(getMoviesGenres(genres)))
     }, [dispatch])
 
     return (

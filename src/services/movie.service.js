@@ -8,9 +8,14 @@ const axiosInstance = axios.create({
 })
 const getFirstPageMovies = async () =>  await axiosInstance.get(`/discover/movie`)
 const getMovies = async (pageNumber) =>  await axiosInstance.get(`/discover/movie?page=${pageNumber}`)
+
 const getMovie = async (id) =>  await axiosInstance.get(`/movie/${id}`)
+
 const getGenres = async () =>  await axiosInstance.get(`/genre/movie/list`)
+
 const getMovieVideo = async (id) =>  await axiosInstance.get(`/movie/${id}/videos`)
+const getTopRatedMovies = () =>  axiosInstance.get(`/movie/top_rated`)
+const getUpcomingMovies = () =>  axiosInstance.get(`/movie/upcoming`)
 
+export {getFirstPageMovies,getMovies, getMovie, getGenres,getMovieVideo, getTopRatedMovies,getUpcomingMovies}
 
-export {getFirstPageMovies,getMovies, getMovie, getGenres,getMovieVideo}

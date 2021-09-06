@@ -2,6 +2,7 @@ import './UserInfo.css'
 import {useSelector} from "react-redux";
 
 export const UserInfo = () => {
+
     let {light_theme} = useSelector(state => state.themeReducer)
 
     return (

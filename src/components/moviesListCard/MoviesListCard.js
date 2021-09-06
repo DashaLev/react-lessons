@@ -4,6 +4,7 @@ import {MovieInfo} from "../movieInfo/MovieInfo";
 import {GenreBadge} from "../genreBadge/GenreBadge";
 import './MoviesListCard.css'
 
+
 export const MoviesListCard = ({movies,item}) => {
 
     return (

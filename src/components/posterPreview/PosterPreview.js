@@ -2,7 +2,7 @@ import './PosterPreview.css'
 
 export const PosterPreview = ({poster_path, backdrop_path}) => {
   return (
-      <div>
+      <div className='posters-block'>
           {
               poster_path && !backdrop_path && <img src={`http://image.tmdb.org/t/p/w185${poster_path}`} alt={'Movie poster'} className={'list-picture'}/>
           }

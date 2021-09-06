@@ -2,6 +2,7 @@ import logo from './logo.png'
 import {Link} from "react-router-dom";
 import {UserInfo} from "../userInfo/UserInfo";
 import {useDispatch, useSelector} from "react-redux";
+import {setThemeColor} from "../../redux/actions";
 import './Header.css'
 
 export const Header = () => {
@@ -10,7 +11,7 @@ export const Header = () => {
     let dispatch = useDispatch()
 
     const changeThemeColor = (light_theme) => {
-        light_theme === false ? dispatch({type:'CHANGE_THEME', payload:true}) : dispatch({type:'CHANGE_THEME', payload:false})
+        light_theme === false ? dispatch(setThemeColor(true)) : dispatch(setThemeColor(false))
     }
 
     return (
@@ -21,9 +22,9 @@ export const Header = () => {
               </Link>
           </div>
            <ul className={light_theme ? 'menu light-c' : 'menu'}>
-               <li> <Link to={'/'} className={light_theme ? '' : 'dark-theme-color'}>All movies</Link> </li>
-               <li> <Link to={'/top_rated'} className={light_theme ? '' : 'dark-theme-color'}>Top rated </Link> </li>
-               <li> <Link to={'/popular'} className={light_theme ? '' : 'dark-theme-color'}>Popular</Link> </li>
+               <li> <Link to={'/'} className={light_theme ? '' : 'dark-theme-color'}>movies list</Link> </li>
+               <li> <Link to={'/top_rated'} className={light_theme ? '' : 'dark-theme-color'}>20 top rated </Link> </li>
+               <li> <Link to={'/upcoming'} className={light_theme ? '' : 'dark-theme-color'}>20 upcoming</Link> </li>
           </ul>
           <button
               onClick={() => changeThemeColor(light_theme)}
