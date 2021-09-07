@@ -14,8 +14,8 @@ const getMovie = async (id) =>  await axiosInstance.get(`/movie/${id}`)
 const getGenres = async () =>  await axiosInstance.get(`/genre/movie/list`)
 
 const getMovieVideo = async (id) =>  await axiosInstance.get(`/movie/${id}/videos`)
-const getTopRatedMovies = () =>  axiosInstance.get(`/movie/top_rated`)
-const getUpcomingMovies = () =>  axiosInstance.get(`/movie/upcoming`)
+const getTopRatedMovies = async () =>  await axiosInstance.get(`/movie/top_rated`)
+const getUpcomingMovies = async () =>  await axiosInstance.get(`/movie/upcoming`)
 
 export {getFirstPageMovies,getMovies, getMovie, getGenres,getMovieVideo, getTopRatedMovies,getUpcomingMovies}
 

@@ -28,7 +28,8 @@ export const Header = () => {
           </ul>
           <button
               onClick={() => changeThemeColor(light_theme)}
-              className={light_theme ? 'change-theme-button theme-button-light-bg' : 'change-theme-button theme-button-dark-bg'}
+              className={light_theme ? 'change-theme-button theme-button-light-bg' :
+                         'change-theme-button theme-button-dark-bg'}
           >Change color</button>
           <UserInfo/>
       </header>

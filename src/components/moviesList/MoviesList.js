@@ -3,11 +3,12 @@ import {useEffect, useState} from "react";
 import {getFirstPageMovies, getMovies} from "../../services/movie.service";
 import {MoviesListCard} from "../moviesListCard/MoviesListCard";
 import './MoviesList.css'
-import {getMoreMoviesPage, getMoviesList} from "../../redux/actions";
+import {getMoreMoviesListPage, getMoviesList} from "../../redux/actions";
+import {Loader} from "../loader/Loader";
 
 export const MoviesList = () => {
 
-    let {movies} = useSelector(state => state.moviesReducer)
+    let {moviesList} = useSelector(state => state.moviesReducer)
     let {light_theme} = useSelector(state => state.themeReducer)
 
     let dispatch = useDispatch()
@@ -24,15 +25,17 @@ export const MoviesList = () => {
 
     const getMoreMovies = (pageNumber) => {
         getMovies(pageNumber).then(({data:{results}}) => {
-            dispatch(getMoreMoviesPage(results))
+            dispatch(getMoreMoviesListPage(results))
         })
     }
 
     return (
-       <div className={light_theme ? 'light-theme-bg' : 'dark-theme-bg'}>
+        <>
+           { moviesList.length === 0 ? <Loader/> :
+           <div className={light_theme ? 'light-theme-bg' : 'dark-theme-bg'}>
                <div className={'movies-list'}>
                    {
-                       movies.map(value => <MoviesListCard key={value.id} item={value} movies={movies}/>)
+                       moviesList.map(value => <MoviesListCard key={value.id} item={value} movies={moviesList}/>)
                    }
                </div>
                <button
@@ -43,6 +46,7 @@ export const MoviesList = () => {
                    disabled={pageNumber === totalPages}
                    className={light_theme ? 'more-movies light-button' : 'more-movies dark-button'}
                >More movies</button>
-       </div>
+           </div> }
+        </>
     )
 }
